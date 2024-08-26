@@ -1,0 +1,11 @@
+Binary trees are general trees in which the root node can only hold up to maximum 2 subtrees left subtree and right subtree.
+
+Based on the number of children binary tree are divided into three types:
+
+1. full binary tree:
+    A full binary tree is a binary tree type where every node has either 0 or 2 child nodes.
+2. complete binary tree:
+    A complete binary tree is a binary tree type where all the leaf nodes must be on the sam elevel.
+    However, root and internal nodes in a complete binary tree can either have 0, 1 or 2 child nodes.
+3. perfect binary tree:
+    A perfect binary tree is a binary tree type where all the leaf nodes are on the same level and every node except leaf nodes have 2 children.

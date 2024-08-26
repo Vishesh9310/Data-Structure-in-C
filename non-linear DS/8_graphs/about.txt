@@ -1,0 +1,29 @@
+Graph: A Graph is a non-linear data structure consisting of vertices and edges.
+The vertices are sometimes also referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph.
+More formally a Graph is composed of a set of vertices(V) and a set of edges(E). The graph is denoted by G(E,V).
+
+0-----3
+|  \
+|   2
+|  /
+1
+
+in the graph
+V={0,1,2,3}
+E={{0,1},{0,2},{0,3},{1,2}}
+G={V,E}
+
+Graph terminology:
+1. Adjacency: A vertex is said to be adjacent to another vertex if there is an edge connecting them. Vertices 2 and 3 are not adjacent because there is no edge between them.
+2. Path: A sequence of edges that allows you to go from vertex A to vertex B is called a path.
+3. Directed Graph: A graph in which an edge(u,v) doesn't necessarily mean that there is an edge(v,u) as well.
+The edges in such a graph are represented by arrow to show the direction of the edge.
+
+Graph Representation:
+1. Adjacency Matrix:
+    An Adjacency matrix is a 2D array of V*V vertices.Each row and column represent a vertex.
+    If the value of any element a[i][j] is 1, it represents that there is an edge connecting vertex i and vertex j.
+
+2.Adjacency List:
+    An Adjacency list represents a graph as an array of linked lists.
+    The index of the array represents a vertex and each element in its linked list represents the other vertices that form an edge with the vertex.

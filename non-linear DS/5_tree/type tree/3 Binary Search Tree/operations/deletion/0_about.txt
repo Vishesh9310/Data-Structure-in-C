@@ -1,0 +1,13 @@
+case 1:
+In the first case, the node to be deleted is the leaf node. in such a case, simply delete the node from the tree.
+
+case 2:
+In the second case, the node to be deleted lies has a single child node. In such a case follow the steps below:
+1. Replace that node with ites child node.
+2. Remove the child node from its original position.
+
+case 3:
+In the third case, the node to be deleted has two children. In such a case follow the steps below:
+1. Get the inorder successor of that node.
+2. Replace the node with the inorder successor.
+3. Remove the inorder successor from ites original position.

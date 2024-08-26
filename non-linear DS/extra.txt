@@ -1,0 +1,24 @@
+tree
+1.By Balance
+    1.Balanced tree
+    2.Unbalanced tree
+2.By Degree
+    1.Binary tree
+        1.operation
+            1.insert
+            2.delete
+            3.search
+        2.traversal
+            1.BFS
+            2.DFS
+        3.types
+            1.Balanced
+            2.Complete
+            3.degenerate
+            4.full
+            5.perfect
+    2.N-ary tree
+    3.Ternary tree
+3.By Ordering
+    1.BST
+    2.Heap

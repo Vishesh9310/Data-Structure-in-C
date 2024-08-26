@@ -1,0 +1,65 @@
+(1.) circular.c file code
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+    int data;
+    struct node* next;
+};
+
+void print(struct node* head){
+    struct node* node=head;
+    while(node!=0){
+        printf("%d ",node->data);
+        node=node->next;
+    }
+    printf("\n");
+}
+
+void insert_begin(struct node** head,int value){
+    struct node* temp;
+    temp=(struct node*)malloc(sizeof(struct node));
+    temp->data=value;
+    temp->next=*head;
+    *head=temp;
+}
+
+
+void insert_end(struct node** head,int value){
+    struct node* newnode=(struct node*)malloc(sizeof(struct node));
+    newnode->data=value;
+    newnode->next=NULL;
+    if(*head==NULL){
+        *head=newnode;
+        return;
+    }
+    struct node* current=*head;
+    while(current->next!=NULL){
+        current=current->next;
+    }
+    current->next=newnode;
+}
+
+int main(){
+    struct node* head=NULL;
+    // insert_begin(&head,12);
+    //insert_begin(&head,23);
+    
+    insert_end(&head,562);
+    insert_end(&head,546);
+    insert_end(&head,236);
+    insert_end(&head,567);
+    insert_end(&head,536);
+
+    printf("Singly Linked list:\n");
+    print(head);
+
+    return 0;
+}
+
+
+
+(2.)

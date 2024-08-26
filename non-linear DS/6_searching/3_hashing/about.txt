@@ -1,0 +1,89 @@
+Ques1:What is Hashing?
+Ans: Any large information source(data base) can be thought of as a table(with multiple fields), containing information.
+for example: a telephone book has fields name, address and phone number.
+when you want to find somebod's phone number, you search the book based on the name field.
+
+component of Hashing:
+1. Key
+2. Hash Function
+3. Hash table
+
+Key -> Hash Function -> Hash table
+
+Key: A Key can be anything string or integer which is fed as input in the hash function the tehcnique that
+determines an index or location for storage of an item in a data structure.
+
+Hash Function: The Hash Function receive the input key and returns the index of an element in the array called a hash table.
+The index is known as the hash index.
+
+Hash table: Hash table is a data structure that maps keys to values using a special function called a hash function.
+Hash stores the data in an associative manner in an array where each data value has its own unique index.
+
+Operations in Hashing:
+1. Initialize
+2. Isempty
+3. Insert
+4. find
+5. Remove  
+
+// Unsorted sequential array:
+An Array implementation stores the nodes consequtively in any order(not necessarily in ascending or descending order).
+
+Operations in Hashing:
+1. Initialize  O(1)
+2. Isempty     O(1)  as you will only check if the first element is empty
+3. Insert      O(1)  as you will add to the end of the array
+4. find        O(n)  as you have to sequentially search the array, in the worst case through the entire array
+5. Remove      O(n)  as you have to sequentially search the array, delete the element and copy all elements one place up
+
+// Sorted sequential array:
+A Sorted array implementation stores the nodes consequtively in either ascending or descending order.
+
+Operations in Hashing:
+1. Initialize  O(1)
+2. Isempty     O(1)  as you will only check if the first element is empty
+3. Insert      O(1)  as you will add to the end of the array
+4. find        Olog(n)  as you can perform a binary search operation Can you think of why?
+5. Remove      O(n)  as you have to perform a binary search and shuffle elements one place up
+
+key -> hash function -> array index
+
+//Hashing performance
+There are three factors the influence the performance of hashing:
+
+1. Hash function:
+    a. should distribute the keys and entries evenly throughout the entire table.
+    b. should minimize collisions.
+
+2. Collision resolution strategy:
+    a. Open addressing: store the key/entry in a different position.
+    b. Separate chaining: chain several keys/ entries in the same position.
+
+3. Table size:
+    a. Too large a table, will cause a wastage of memory.
+    b. Too small a table will cause increased collisions and eventually force rehashing
+    (creating a new hash table of larger size and copying the contents of the current hash table into it).
+    c. The size should be appropriate to the hash function used and should typically be a prime number.
+
+//Selecting Hash Function
+The hash function converts the key into the table position. It can be carried out using:
+
+1. Modular Arithmetic.
+2. Truncation.
+3. Folding.
+
+//Collision
+Let us consider the case when we have a single array with four records, each with two fiels,
+one for the key and one to hold data(we call this a single slot bucket). Let the hashing function be a simple modulus operator 
+i.e. array index is computed by finding the remainder of dividing the key by 4.
+
+array index = key MOD 4
+
+//Collision resolution:
+the hash table can be implemented either using:
+1. Bucket:
+2. Chaining
+3. Open addressing probing:
+    a. Linear probing.
+    b. Quadratic probing: increment the position computed by the hash function in Quadratic fashion ex:1,4,9,16,...
+    c. Double hash: compute the index as a function of two different hash functions.

@@ -1,0 +1,13 @@
+1. Root node
+2. Edge
+3. Parent
+4. child node
+5. Sibling
+6. Leaf
+7. Internal Node
+8. Degree
+9. Level
+10. Height
+11. Depth
+12. Path
+13. Sub tree

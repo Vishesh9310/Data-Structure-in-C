@@ -1,0 +1,6 @@
+Binary Search trees possess all the properties of binary trees including some extra properties of their own,
+based on some constraints, making them more efficient than binary trees.
+the data in the binary Search tree is always stored in such a way that the values in the left subtree are always
+less than the values in the root node and the values in the right subtree are always greater than the values in the root node.
+
+left subtree < root node <= right subtree.
